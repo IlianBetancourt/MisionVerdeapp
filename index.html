@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&family=Righteous&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo"><a href="index.html"></a></div>
+        <div class="slogan">Explora, aprende y cuida: una misión por un planeta mejor.</div>
+        
+        <button class="Menu" onclick="toggleMenu()"></button>
+        
+    </header>
+    
+    <nav class="menu" id="menu">
+        <ul>
+            <li><a href="index2.html">Misión/Visión</a></li>
+            <li><a href="index3.html">Contáctanos</a></li>
+            <li><a href="index4.html">Comentarios</a></li>
+        </ul>
+    </nav>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('open'); // Alterna la clase "open"
+        }
+    </script>
+
+    <script>
+        const Menu = document.getElementById('Menu');
+        const menu = document.getElementById('menu');
+
+        // Agrega un evento de clic al menú hamburguesa
+        Menu.addEventListener('click', () => {
+            // Alterna la visibilidad del menú
+            if (menu.style.display === 'none' || menu.style.display === '') {
+                menu.style.display = 'block'; // Muestra el menú
+            } else {
+                menu.style.display = 'none'; // Oculta el menú
+            }
+        });
+
+    </script>
+
+    <main>
+
+        <div class="cuadro">
+            <div class="item rectangulo">¡Te presentamos la reciente app educativa para los más pequeños, quienes aprenderán junto con la familia!</div>
+            <div class="item rectangulo" style="background-image: url(casasustentable.gif); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+            <div class="item cuadrado">Es una app plataforma, los niños de 4-12 años podrían explorar diferentes ecosistemas (bosques, océanos, desiertos) a través de mapas interactivos y animaciones. Podrían aprender sobre la flora y fauna, y cómo cada especie contribuye al equilibrio del ecosistema.
+            </div>
+            <div class="item cuadrado" style="background-image: url(backgroundmisionverde.gif); background-size: cover; background-position: center; background-repeat: no-repeat;">
+            
+            </div>
+            <div class="call"> </div>
+
+        </div>
+
+        <div class="add"></div>
+
+
+
+    </main>
+    <script>
+        document.addEventListener('mousemove', (e) => {
+            const anchoVentana = window.innerWidth;
+            const altoVentana = window.innerHeight;
+            const x = e.clientX / anchoVentana;
+            const y = e.clientY / altoVentana;
+
+            const xPos = (x - 0.5) * 10;
+            const yPos = (y - 0.5) * 10;
+
+            document.body.style.backgroundPosition = `${50 + xPos}% ${50 + yPos}%`;
+        });
+
+    </script>
+
+    <footer>
+        <div class="social">
+            <div class="face"></div>
+            <div class="insta"></div>
+            <div class="imagotipo"></div>
+            <div class="Rights">© 2024 Todos los derechos reservados</div>
+        </div>
+
+    </footer>
+</body>
+
+</html>

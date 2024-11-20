@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página básica</title>
+    <link rel="stylesheet" href="main3.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo"><a href="index.html"></a></div>
+        <div class="slogan">Explora, aprende y cuida: una misión por un planeta mejor.</div>
+
+        <button class="Menu" onclick="toggleMenu()"></button>
+    </header>
+
+    <nav class="menu" id="menu">
+        <ul>
+            <li><a href="index2.html">Misión/Visión</a></li>
+            <li><a href="index3.html">Contáctanos</a></li>
+            <li><a href="index4.html">Comentarios</a></li>
+        </ul>
+    </nav>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('open'); // Alterna la clase "open"
+        }
+
+    </script>
+
+    <script>
+        const Menu = document.getElementById('Menu');
+        const menu = document.getElementById('menu');
+
+        // Agrega un evento de clic al menú hamburguesa
+        Menu.addEventListener('click', () => {
+            // Alterna la visibilidad del menú
+            if (menu.style.display === 'none' || menu.style.display === '') {
+                menu.style.display = 'block'; // Muestra el menú
+            } else {
+                menu.style.display = 'none'; // Oculta el menú
+            }
+        });
+
+    </script>
+
+
+    <main class="body">
+        <div class="add-left"></div>
+        <div class="content"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdchsackigiW5wz510Cslwb7PZbXuW0dr9ldGtN3_VsPfoVxA/viewform?embedded=true" width="640" height="824" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></div>
+        <div class="add-right"></div>
+    </main>
+
+    <script>
+        document.addEventListener('mousemove', (e) => {
+            const anchoVentana = window.innerWidth;
+            const altoVentana = window.innerHeight;
+            const x = e.clientX / anchoVentana;
+            const y = e.clientY / altoVentana;
+
+            const xPos = (x - 0.5) * 10;
+            const yPos = (y - 0.5) * 10;
+
+            document.body.style.backgroundPosition = `${50 + xPos}% ${50 + yPos}%`;
+        });
+
+    </script>
+
+    <footer class="footer">
+        <p>© 2024 Todos los derechos reservados</p>
+    </footer>
+</body>
+
+</html>

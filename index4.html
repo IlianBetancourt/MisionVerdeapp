@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página básica</title>
+    <link rel="stylesheet" href="main4.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo"><a href="index.html"></a></div>
+        <div class="slogan">Explora, aprende y cuida: una misión por un planeta mejor.</div>
+
+        <button class="Menu" onclick="toggleMenu()"></button>
+    </header>
+
+    <nav class="menu" id="menu">
+        <ul>
+            <li><a href="index2.html">Misión/Visión</a></li>
+            <li><a href="index3.html">Contáctanos</a></li>
+            <li><a href="index4.html">Comentarios</a></li>
+        </ul>
+    </nav>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('open'); // Alterna la clase "open"
+        }
+
+    </script>
+
+    <script>
+        const Menu = document.getElementById('Menu');
+        const menu = document.getElementById('menu');
+
+        // Agrega un evento de clic al menú hamburguesa
+        Menu.addEventListener('click', () => {
+            // Alterna la visibilidad del menú
+            if (menu.style.display === 'none' || menu.style.display === '') {
+                menu.style.display = 'block'; // Muestra el menú
+            } else {
+                menu.style.display = 'none'; // Oculta el menú
+            }
+        });
+
+    </script>
+
+
+    <main class="body">
+        <div class="add-left"></div>
+        <div class="content">
+            <div class="titulo">¡Nos encanta leerte y tomarte en cuenta!</div>
+         <div class="comment-section">
+                <div class="comment">
+                    <h3>Usuario 1</h3>
+                    <p>¡Esta aplicación es increíble! A mis hijos les encanta explorar los diferentes ecosistemas y aprender sobre la naturaleza. ¡10/10!</p>
+                </div>
+                <div class="comment">
+                    <h3>Usuario 2</h3>
+                    <p>Muy educativa y divertida. Mis hijos pasan horas aprendiendo mientras juegan. La recomiendo totalmente.</p>
+                </div>
+                <div class="comment">
+                    <h3>Usuario 3</h3>
+                    <p>Una herramienta fantástica para enseñar sobre la conservación del medio ambiente. Muy interactiva y bien diseñada.</p>
+                </div>
+                <div class="comment">
+                    <h3>Usuario 4</h3>
+                    <p>¡Me encanta! Incluso yo he aprendido cosas nuevas. Es perfecta para toda la familia.</p>
+                </div>
+            </div>
+        </div>
+        <div class="add-right"></div>
+    </main>
+
+    <script>
+        document.addEventListener('mousemove', (e) => {
+            const anchoVentana = window.innerWidth;
+            const altoVentana = window.innerHeight;
+            const x = e.clientX / anchoVentana;
+            const y = e.clientY / altoVentana;
+
+            const xPos = (x - 0.5) * 10;
+            const yPos = (y - 0.5) * 10;
+
+            document.body.style.backgroundPosition = `${50 + xPos}% ${50 + yPos}%`;
+        });
+
+    </script>
+
+    <footer class="footer">
+        <p>© 2024 Todos los derechos reservados</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-image: url(backgroundMV_Mesa%20de%20trabajo%201.png);
+     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Estilo para el header */
+.header {
+    padding: 20px;
+    height: 150px;
+    background-color: #F0846D;
+    display: flex;
+    justify-content: space-between;
+    flex-shrink: 0;
+}
+
+/* Estilo para el cuerpo */
+.body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    min-height: calc(100vh - 150px); /* Ajusta para cubrir la pantalla menos header y footer */
+}
+
+/* Estilo para los rectángulos */
+.add-left, .add-right {
+    width: 10%;
+    height: 700px;
+    background-color: transparent;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(addRHuwu.png);
+    background-position: ;
+    background-size: cover;
+}
+
+/* Estilo para el contenido principal */
+.content {
+    flex: 1;
+    margin: 0 20px;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Agrega sombra */
+}
+
+.content iframe {
+    border-radius: 8px;
+    border: none; /* Quita el borde del iframe */
+    overflow: hidden;
+}
+
+/* Estilo para el footer */
+.footer {
+    background-color: #F0846D;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.logo {
+    width: 200px;
+    height: 150px;
+    background-image: url(LogoMisionverde_Mesa%20de%20trabajo%201-01.png);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover{
+    transform: scale(1.2);
+}
+
+.logo a {
+    display: block; /* Convierte el enlace en un bloque */
+    width: 200px; /* Ajusta al tamaño deseado */
+    height: 150px; /* Ajusta al tamaño deseado */
+    background-image: url('LogoMisionverde_Mesa%20de%20trabajo%201-01.png'); /* Imagen de fondo */
+    background-size: cover; /* Escala la imagen */
+    background-repeat: no-repeat; /* No repite la imagen */
+    background-position: center; /* Centra la imagen */
+}
+
+
+.slogan {
+    width: 450px;
+    height: 60px;
+    background-color: transparent;
+    padding: 10px;
+    margin-right: 1%;
+    margin-top: 1%;
+    text-align: center;
+    @import url('https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&family=Righteous&display=swap');
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 26px;
+    color: #516024;
+}
+
+.Menu {
+    margin-right: 1%;
+    width: 250px;
+    height: 130px;
+    background-image: url(iconomenu_Mesa%20de%20trabajo%201-02.png);
+    transition: background-image 1s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    font-size: 30px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    
+}
+
+.Menu:hover{
+    background-image: url(iconomenu_Mesa%20de%20trabajo%201-01.png);
+}
+
+.menu {
+    display: block;
+    all: unset;
+    background-color: transparent;
+    max-height: 0;
+    overflow: hidden;
+    /* Oculta el menú por defecto */
+    background-color: #516024;
+    /* Fondo del menú */
+    position: absolute;
+    /* Posición absoluta para que no afecte el layout */
+    top: 60px;
+    /* Ajusta según la altura de tu header */
+    right: 40px;
+    /* Alineación a la derecha */
+    border: 1px solid #84e8c5;
+    /* Borde del menú */
+    border-radius: 5px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.5s ease;
+    /* Bordes redondeados */
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+    font-family: 'Roboto', sans-serif;
+}
+.menu.open{
+    max-height: 200px;
+    opacity: 1;
+    transform: translateY(0);
+    border: none;
+}
+
+.menu a {
+    color: inherit; /* Usa el color heredado del contenedor */
+    text-decoration: none; /* Quita el subrayado */
+    transition: color 1s ease;
+}
+
+.menu a:hover {
+    color: #a5503e; /* Define un color específico al pasar el cursor */
+    text-decoration: none; /* Asegura que no haya subrayado en el hover */
+}
+
+
+/* Estilos para las opciones del menú */
+.menu ul {
+    list-style: none;
+    color: white;
+    /* Quita los puntos de la lista */
+    padding: 0;
+    background-color: transparent;
+    /* Sin padding */
+}
+
+.menu li {
+    padding: 10px 15px;
+    background-color: transparent;
+    transition: ;
+    /* Espacio interno para cada opción */
+}
+
+.menu li:hover {
+    background-color: #c9d89d;
+    /* Efecto hover */
+}
